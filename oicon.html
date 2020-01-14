@@ -46,6 +46,7 @@
                             {
                                 zoom: 15,//縮尺
                                 gestureHandling: 'greedy',
+                                clickableIcons: false,
                                 center: map_location,//地図の中心座標
                                 //ここをfalseにすると地図上に人みたいなアイコンとか表示される
                                 disableDefaultUI: true, //一旦全て非表示
@@ -139,7 +140,7 @@
 
     function markerEvent(i) {
         marker[i].addListener('click', function() { // マーカーをクリックしたとき
-            map.panTo(marker[i].position);
+            //map.panTo(marker[i].position);
             //他の吹き出しを削除する
             for(let j = 0; j < marker.length; j++ ){
                 infoWindow[j].close();
