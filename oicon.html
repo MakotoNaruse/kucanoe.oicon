@@ -119,7 +119,6 @@
                 const path = [];
                 for(let j = 0; j < data[i].length; j++ ){
                     path.push(new google.maps.LatLng(data[i][j].lat,data[i][j].lng));
-                    console.log(data[i][j]);
                 }
                 var flightPath=new google.maps.Polyline({
         	       path: path, //ポリラインの配列
