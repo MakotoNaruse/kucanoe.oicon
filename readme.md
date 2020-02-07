@@ -7,10 +7,13 @@ jsでxssをしているためローカル環境ではfile:/の開き方では駅
 各開発環境にApacheなどがあるならそれでOK
 
 ## phpのみで簡易サーバを立てる
-`cd 作業ディレクトリ`
+`cd 作業ディレクトリ` 
+
 `php -S localhost:8080`
 
 ## Node.jsを用いてliveサーバを立てる
-`npm install -g live-server`
-`cd 作業ディレクトリ`
+`npm install -g live-server` 
+
+`cd 作業ディレクトリ` 
+
 `live-server --port=8080`
