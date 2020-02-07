@@ -73,18 +73,16 @@
     function makeMap () {
         console.log("マップ作成");
         $.getJSON("station.json", function() {
-            console.log("実行");
+            console.log("駅実行");
         })
         .success(function(data) {
-            console.log("成功");
-            console.log(data);
+            console.log("駅成功");
             for(let i = 0; i < data.length; i++ ){
                 content = "　";
                 if( data[i].type == "station-card"){
                     content = "★";
                 }
                 var marker_location = new google.maps.LatLng(data[i].lat,data[i].lng);
-                console.log("new google.maps.LatLng(" + data[i].lat + "," + data[i].lng + ")");
                 marker[i] = new MarkerWithLabel({
                     position: marker_location, //マーカーを表示させる座標
                     map: map, //マーカーを表示させる地図
@@ -109,36 +107,36 @@
             console.log("テキスト：" + jqXHR.responseText);
         })
         .complete(function() {
-            console.log("完了");
+            console.log("駅完了");
         });
         //道を描く
-        var ways = [
-	           [new google.maps.LatLng(35.028784062101586,135.77923866394048) ,
-                 new google.maps.LatLng(35.02855372256138,135.78304763608173) ,
-                 new google.maps.LatLng(35.028879333769424,135.7862139838238) ,
-                 new google.maps.LatLng(35.027908536319565,135.79142819814876) ,
-                 new google.maps.LatLng(35.0251782829269,135.79188184021123) ,
-                 new google.maps.LatLng(35.02122949616092,135.79221509962625) ,
-                 new google.maps.LatLng(35.019561406336145,135.79160581669726) ,
-                 new google.maps.LatLng(35.0167277282406,135.7907689674846) ,
-                 new google.maps.LatLng(35.01667061433925,135.78804384312548) ,
-                 new google.maps.LatLng(35.01695744604054,135.78575763336264) ,
-                 new google.maps.LatLng(35.017359180358596,135.7783869229897) ,
-                 new google.maps.LatLng(35.020390492215675,135.77847811298977) ,
-                 new google.maps.LatLng(35.02186219383679,135.77856394367825) ,
-                 new google.maps.LatLng(35.02522284598233,135.7785907657684),
-                 new google.maps.LatLng(35.028784062101586,135.77923866394048) ,]
-        ];
-        for(let i = 0; i < ways.length; i++ ){
-
-            var flightPath=new google.maps.Polyline({
-    	       path: ways[i], //ポリラインの配列
-    	       strokeColor: '#000000', //色（#RRGGBB形式）
-    	       strokeOpacity: 0.5, //透明度　0.0～1.0（デフォルト）
-    	       strokeWeight: 5 //太さ（単位ピクセル）
-           });
-           flightPath.setMap(map);
-        }
+        $.getJSON("way.json", function() {
+            console.log("道実行");
+        })
+        .success(function(data) {
+            console.log("道成功");
+            for(let i = 0; i < data.length; i++ ){
+                const path = [];
+                for(let j = 0; j < data[i].length; j++ ){
+                    path.push(new google.maps.LatLng(data[i][j].lat,data[i][j].lng));
+                    console.log(data[i][j]);
+                }
+                var flightPath=new google.maps.Polyline({
+        	       path: path, //ポリラインの配列
+        	       strokeColor: '#000000', //色（#RRGGBB形式）
+        	       strokeOpacity: 0.5, //透明度　0.0～1.0（デフォルト）
+        	       strokeWeight: 5 //太さ（単位ピクセル）
+               });
+               flightPath.setMap(map);
+            }
+        })
+        .error(function(jqXHR, textStatus, errorThrown) {
+            console.log("エラー：" + textStatus);
+            console.log("テキスト：" + jqXHR.responseText);
+        })
+        .complete(function() {
+            console.log("道完了");
+        });
     }
 
     function markerEvent(i) {
