@@ -22,53 +22,38 @@
 <script src="js/markerwithlabel.js"></script>
 <script>
 
-    var naoya = 0;
     var map;
     var marker = [];
     var infoWindow = [];
 
-    function initMap(address) {
-        console.log("接続完了");
-        var geocoder = new google.maps.Geocoder();
-        //住所から座標を取得する
-        geocoder.geocode(
-                {
-                    'address': address,
-                    'region': 'jp'
-                },
-                function (results, status) {
-                    if (status == google.maps.GeocoderStatus.OK) {
-                        google.maps.event.addDomListener(window, 'load', function () {
-                            var map_tag = document.getElementById('map-canvas');
-                            // 取得した座標をセット緯度経度をセット
-                            var map_location = new google.maps.LatLng(results[0].geometry.location.lat(),results[0].geometry.location.lng());
-                            //マップ表示のオプション
-                            var map_options =
-                            {
-                                zoom: 15,//縮尺
-                                gestureHandling: 'greedy',
-                                clickableIcons: false,
-                                center: map_location,//地図の中心座標
-                                //ここをfalseにすると地図上に人みたいなアイコンとか表示される
-                                disableDefaultUI: true, //一旦全て非表示
-                                zoomControl: true, //ズーム コントロールのみ表示
-                                mapTypeId: google.maps.MapTypeId.ROADMAP//地図の種類を指定
-                            };
+    function initMap(lat,lng) {
 
-                            //マップを表示する
-                            map = new google.maps.Map(map_tag, map_options);
+        var map_tag = document.getElementById('map-canvas');
+        // 取得した座標をセット緯度経度をセット
+        var map_location = new google.maps.LatLng(lat,lng);
+        //マップ表示のオプション
+        var map_options =
+        {
+            zoom: 15,//縮尺
+            gestureHandling: 'greedy',
+            clickableIcons: false,
+            center: map_location,//地図の中心座標
+            //ここをfalseにすると地図上に人みたいなアイコンとか表示される
+            disableDefaultUI: true, //一旦全て非表示
+            zoomControl: true, //ズーム コントロールのみ表示
+            mapTypeId: google.maps.MapTypeId.ROADMAP//地図の種類を指定
+        };
 
-                            //読み込みが完了したら検索
-                            google.maps.event.addListenerOnce(map, 'idle', function() {
-                                makeMap();
-                            });
-                            map.addListener('click', function(pos) {
-                                console.log(pos.latLng.lat(), pos.latLng.lng());
-                            });
-                        });
-                    }
-                }
-        );
+        //マップを表示する
+        map = new google.maps.Map(map_tag, map_options);
+
+        //読み込みが完了したら検索
+        google.maps.event.addListenerOnce(map, 'idle', function() {
+            makeMap();
+        });
+        map.addListener('click', function(pos) {
+            console.log(pos.latLng.lat(), pos.latLng.lng());
+        });
     }
 
     function makeMap () {
@@ -164,7 +149,7 @@
 
 $(document).ready(function() {
 
-    initMap('京都大学');
+    initMap(35.022297432220824,135.77891518805924);
 
 });
 
