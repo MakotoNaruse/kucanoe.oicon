@@ -131,6 +131,40 @@ Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
         .complete(function() {
             console.log("道完了");
         });
+        $.getJSON("team.json", function() {
+            console.log("チーム実行");
+        })
+        .success(function(data) {
+            console.log("チーム成功");
+            for(let i = 0; i < data.length; i++ ){
+                station = stations[data[i].station];
+                var marker_location = new google.maps.LatLng(station.lat,station.lng);
+                marker[i] = new MarkerWithLabel({
+                    position: marker_location, //マーカーを表示させる座標
+                    map: map, //マーカーを表示させる地図
+                    icon: {
+                        fillColor: "#333333",                //塗り潰し色
+                        fillOpacity: 0,                    //透明にする
+                        path: google.maps.SymbolPath.CIRCLE,
+                    },
+                    labelContent: content,                   //ラベル文字
+                    labelAnchor: new google.maps.Point(data[i].x,data[i].y),   //ラベル文字の基点
+                    labelClass: data[i].style,                        //CSSのクラス名
+                    labelStyle: {opacity: 1}
+                });
+                infoWindow[i] = new google.maps.InfoWindow({ // 吹き出しの追加
+                    content: data[i].style // 吹き出しに表示する内容
+                });
+            }
+        })
+        .error(function(jqXHR, textStatus, errorThrown) {
+            console.log("エラー：" + textStatus);
+            console.log("テキスト：" + jqXHR.responseText);
+        })
+        .complete(function() {
+            console.log("駅完了");
+            console.log(stations);
+        });
     }
 
     function markerEvent(i) {

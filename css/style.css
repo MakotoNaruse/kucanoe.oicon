@@ -65,3 +65,32 @@ html body {
   background-color: white;
   border:double 2px #ccc;
 }
+
+.team-red {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  background-image: url("../img/train_red.svg");    /* 背景画像指定 */
+  background-size:  contain;
+}
+.team-blue {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  background-image: url("../img/train_blue.svg");    /* 背景画像指定 */
+  background-size:  contain;
+}
+.team-yellow {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  background-image: url("../img/train_yellow.svg");    /* 背景画像指定 */
+  background-size:  contain;
+}
+.team-green {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  background-image: url("../img/train_green.svg");    /* 背景画像指定 */
+  background-size:  contain;
+}
