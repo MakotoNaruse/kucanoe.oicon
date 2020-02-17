@@ -18,13 +18,15 @@
     </main>
 </body>
 
-<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyChKLMM6Y7F0q14OUZV_eEy5SLG-F_s5a0"></script>
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyBxeZQZVMCiuAHBEP7cUVhxbdcc2ww3K64"></script>
 <script src="js/markerwithlabel.js"></script>
 <script>
 
     var map;
     var marker = [];
     var infoWindow = [];
+
+    var stations = {};
 
     function initMap(lat,lng) {
 
@@ -86,6 +88,8 @@
                     content: data[i].name // 吹き出しに表示する内容
                 });
                 markerEvent(i);
+                //配列に追加
+                stations[data[i].name] = {'lat': data[i].lat, 'lng': data[i].lng};
             }
         })
         .error(function(jqXHR, textStatus, errorThrown) {
@@ -94,6 +98,7 @@
         })
         .complete(function() {
             console.log("駅完了");
+            console.log(stations);
         });
         //道を描く
         $.getJSON("way.json", function() {
@@ -104,7 +109,10 @@
             for(let i = 0; i < data.length; i++ ){
                 const path = [];
                 for(let j = 0; j < data[i].length; j++ ){
-                    path.push(new google.maps.LatLng(data[i][j].lat,data[i][j].lng));
+                    if(stations[data[i][j]]){
+                        station = stations[data[i][j]];
+                        path.push(new google.maps.LatLng(station.lat,station.lng));
+                    }
                 }
                 var flightPath=new google.maps.Polyline({
         	       path: path, //ポリラインの配列
