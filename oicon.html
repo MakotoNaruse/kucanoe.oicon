@@ -25,7 +25,9 @@ Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
 
     var map;
     var marker = [];
+    var team_marker = [];
     var infoWindow = [];
+    var team_infoWindow = [];
 
     var stations = {};
 
@@ -139,7 +141,7 @@ Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
             for(let i = 0; i < data.length; i++ ){
                 station = stations[data[i].station];
                 var marker_location = new google.maps.LatLng(station.lat,station.lng);
-                marker[i] = new MarkerWithLabel({
+                team_marker[i] = new MarkerWithLabel({
                     position: marker_location, //マーカーを表示させる座標
                     map: map, //マーカーを表示させる地図
                     icon: {
@@ -152,9 +154,12 @@ Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
                     labelClass: data[i].style,                        //CSSのクラス名
                     labelStyle: {opacity: 1}
                 });
-                infoWindow[i] = new google.maps.InfoWindow({ // 吹き出しの追加
+                team_infoWindow[i] = new google.maps.InfoWindow({ // 吹き出しの追加
+                    pixelOffset: new google.maps.Size(-data[i].x+20,-data[i].y),
                     content: data[i].style // 吹き出しに表示する内容
                 });
+                team_markerEvent(i);
+
             }
         })
         .error(function(jqXHR, textStatus, errorThrown) {
@@ -175,6 +180,17 @@ Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
                 infoWindow[j].close();
             }
             infoWindow[i].open(map, marker[i]); // 吹き出しの表示
+        });
+    }
+
+    function team_markerEvent(i) {
+        team_marker[i].addListener('click', function() { // マーカーをクリックしたとき
+            //map.panTo(marker[i].position);
+            //他の吹き出しを削除する
+            for(let j = 0; j < team_marker.length; j++ ){
+                team_infoWindow[j].close();
+            }
+            team_infoWindow[i].open(map, team_marker[i]); // 吹き出しの表示
         });
     }
 
