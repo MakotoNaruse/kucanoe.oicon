@@ -227,7 +227,7 @@ $(document).ready(function() {
       /* geolocation is available */
       navigator.geolocation.getCurrentPosition(function(position) {
           console.log("取得成功");
-          map.panTo(position.coords.latitude,position.coords.longitude);
+          map.panTo(new google.maps.LatLng(position.coords.latitude,position.coords.longitude));
       }, function(position) {
           // 取得失敗
           console.log("取得失敗");
