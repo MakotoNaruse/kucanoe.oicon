@@ -13,7 +13,7 @@
 "discription": "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>シエルコート北白川<td>3000万円<td>150%<td></table>"},
 {"lat": "35.027908536319565",
 "lng": "135.79142819814876",
-"type": "station-property",
+"type": "station-property-dis",
 "name": "銀閣寺道",
 "discription": "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>シエルコート北白川<td>3000万円<td>150%<td></table>"},
 {"lat": "35.0251782829269",

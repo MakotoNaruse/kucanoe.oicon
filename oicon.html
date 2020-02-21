@@ -86,7 +86,7 @@ Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
                     labelClass: data[i].type,                        //CSSのクラス名
                     labelStyle: {opacity: 1}
                 });
-                if(data[i].type == "station-property"){
+                if(data[i].type == "station-property" || data[i].type == "station-property-dis"){
                     content = data[i].name + "<br>" + data[i].discription;
                 } else if(data[i].type == "station-blue"){
                     content = data[i].name + "<br>" + "+サイコロの目×1000万円";
@@ -235,7 +235,7 @@ $(document).ready(function() {
     } else {
       /* geolocation IS NOT available */
       console.log("取得失敗");
-      
+
     }
 
 });
