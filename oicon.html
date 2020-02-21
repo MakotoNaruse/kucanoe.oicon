@@ -86,10 +86,19 @@ Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
                     labelClass: data[i].type,                        //CSSのクラス名
                     labelStyle: {opacity: 1}
                 });
-                if(data[i].name == "北白川"){
+                if(data[i].type == "station-property"){
                     content = data[i].name + "<br>" + data[i].discription;
-                } else{
-                    content = data[i].name;
+                } else if(data[i].type == "station-blue"){
+                    content = data[i].name + "<br>" + "+サイコロの目×1000万円";
+                } else if(data[i].type == "station-red"){
+                    content = data[i].name + "<br>" + "-サイコロの目×1000万円";
+                } else if(data[i].type == "station-card"){
+                    content = data[i].name + "<br>" + "<table><tr><th>カード名<th>販売価格<th>売却価格</tr>"
+                    + "<tr><td>急行カード<td>1000万円<td>500万円</tr>"
+                    + "<tr><td>特急カード<td>4000万円<td>2000万円</tr>"
+                    + "<tr><td>新幹線カード<td>1億円<td>5000万円</tr>"
+                    + "<tr><td>☆に願いをカード<td>2億円<td>1億円</tr>"
+                    + "<tr><td>スペシャルカード<td>8000万円<td>4000万円</tr></table>";
                 }
                 infoWindow[i] = new google.maps.InfoWindow({ // 吹き出しの追加
                     content: content // 吹き出しに表示する内容
