@@ -231,15 +231,16 @@ $(document).ready(function() {
           var marker_location = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
           current = new google.maps.Marker({
               map : map,             // 対象の地図オブジェクト
-              position : marker_location   // 緯度・経度
+              position : marker_location,   // 緯度・経度
               icon: {
-        		fillColor: "#1E90FF",                //塗り潰し色
-        		fillOpacity: 0.8,                    //塗り潰し透過率
-        		path: google.maps.SymbolPath.CIRCLE, //円を指定
-        		scale: 16,                           //円のサイズ
-        		strokeColor: "#40E0D0",              //枠の色
-        		strokeWeight: 1.0                    //枠の透過率
-        	},
+                fillColor: "#1E90FF",                //塗り潰し色
+                fillOpacity: 0.8,                    //塗り潰し透過率
+                path: google.maps.SymbolPath.CIRCLE, //円を指定
+                scale: 8,                           //円のサイズ
+                strokeColor: "#40E0D0",              //枠の色
+                strokeWeight: 1.0                    //枠の透過率
+              },
+              zIndex: 100
           });
       }, function(position) {
           // 取得失敗
