@@ -94,3 +94,11 @@ html body {
   background-image: url("../img/train_green.svg");    /* 背景画像指定 */
   background-size:  contain;
 }
+
+.kozawa {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  background-image: url("../img/mdma.jpg");    /* 背景画像指定 */
+  background-size:  contain;
+}

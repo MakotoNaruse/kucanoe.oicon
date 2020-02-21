@@ -44,8 +44,7 @@ Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
             clickableIcons: false,
             center: map_location,//地図の中心座標
             //ここをfalseにすると地図上に人みたいなアイコンとか表示される
-            disableDefaultUI: true, //一旦全て非表示
-            zoomControl: true, //ズーム コントロールのみ表示
+            disableDefaultUI: true, //全て非表示
             mapTypeId: google.maps.MapTypeId.ROADMAP//地図の種類を指定
         };
 
@@ -87,8 +86,13 @@ Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
                     labelClass: data[i].type,                        //CSSのクラス名
                     labelStyle: {opacity: 1}
                 });
+                if(data[i].name == "北白川"){
+                    content = data[i].name + "<br>" + data[i].discription;
+                } else{
+                    content = data[i].name;
+                }
                 infoWindow[i] = new google.maps.InfoWindow({ // 吹き出しの追加
-                    content: data[i].name // 吹き出しに表示する内容
+                    content: content // 吹き出しに表示する内容
                 });
                 markerEvent(i);
                 //配列に追加
@@ -149,14 +153,14 @@ Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
                         fillOpacity: 0,                    //透明にする
                         path: google.maps.SymbolPath.CIRCLE,
                     },
-                    labelContent: content,                   //ラベル文字
+                    labelContent: "",                   //ラベル文字
                     labelAnchor: new google.maps.Point(data[i].x,data[i].y),   //ラベル文字の基点
                     labelClass: data[i].style,                        //CSSのクラス名
                     labelStyle: {opacity: 1}
                 });
                 team_infoWindow[i] = new google.maps.InfoWindow({ // 吹き出しの追加
                     pixelOffset: new google.maps.Size(-data[i].x+20,-data[i].y),
-                    content: data[i].style // 吹き出しに表示する内容
+                    content: data[i].name + "<br>" + data[i].discription // 吹き出しに表示する内容
                 });
                 team_markerEvent(i);
 
@@ -167,7 +171,7 @@ Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
             console.log("テキスト：" + jqXHR.responseText);
         })
         .complete(function() {
-            console.log("駅完了");
+            console.log("チーム完了");
             console.log(stations);
         });
     }
