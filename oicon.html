@@ -221,7 +221,22 @@ Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
 
 $(document).ready(function() {
 
-    initMap(35.022297432220824,135.77891518805924);
+    initMap(35.00375231716866,135.77706047825677);
+
+    if ("geolocation" in navigator) {
+      /* geolocation is available */
+      navigator.geolocation.getCurrentPosition(function(position) {
+          console.log("取得成功");
+          map.panTo(position.coords.latitude,position.coords.longitude);
+      }, function(position) {
+          // 取得失敗
+          console.log("取得失敗");
+      },);
+    } else {
+      /* geolocation IS NOT available */
+      console.log("取得失敗");
+      
+    }
 
 });
 
