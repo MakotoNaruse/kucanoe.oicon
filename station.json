@@ -407,7 +407,7 @@
 "lng": "135.77209165494997",
 "type": "station-property",
 "name": "四条京阪前",
-"discription": "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>歌舞伎北座<td>1億円<td>30%<td></tr><tr><td>歌舞伎南座<td>1億円<td>30%<td></tr><tr><td>祇園四条駅<td>1億円<td>20%<td></tr><tr><td>焼肉の天壇<td>7000万円<td>100%<td></tr><tr><td>ビアガーデン<td>5000万円<td>100%<td></tr><tr><td>ラーメン屋<td>1000万円<td>100%<td></tr></table>"},
+"discription": "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>歌舞伎北座<td>1億円<td>30%<td>OB</tr><tr><td>歌舞伎南座<td>1億円<td>30%<td>OB</tr><tr><td>祇園四条駅<td>1億円<td>20%<td>OB</tr><tr><td>焼肉の天壇<td>7000万円<td>100%<td>OB</tr><tr><td>ビアガーデン<td>5000万円<td>100%<td>OB</tr><tr><td>ラーメン屋<td>1000万円<td>100%<td>OB</tr></table>"},
 {"lat": "35.00912317794786",
 "lng": "135.7722418586548",
 "type": "station-property",
