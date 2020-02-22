@@ -112,7 +112,7 @@
 "lng": "135.75830847688908",
 "type": "station-property",
 "name": "北大路バスターミナル",
-"discription": "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>大谷大学<td>2億円<td>5%<td></tr><tr><td>バス会社<td>3億円<td>50%<td></tr><tr><td>地下鉄<td>3億円<td>50%<td></tr><tr><td>北大路ビブレ<td>3億円<td>50%<td></tr><tr><td>スターバックスコーヒー<td>3000万円<td>100%<td></tr><tr><td>サーティーワンアイスクリーム<td>3000万円<td>100%<td></tr></table>"},
+"discription": "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>大谷大学<td>2億円<td>5%<td></tr><tr><td>バス会社<td>3億円<td>50%<td></tr><tr><td>地下鉄<td>3億円<td>50%<td>小澤</tr><tr><td>北大路ビブレ<td>3億円<td>50%<td></tr><tr><td>スターバックスコーヒー<td>3000万円<td>100%<td>小澤</tr><tr><td>サーティーワンアイスクリーム<td>3000万円<td>100%<td>小澤</tr></table>"},
 {"lat": "35.04223873987208",
 "lng": "135.75466130798995",
 "type": "station-blue",
