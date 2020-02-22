@@ -23,10 +23,10 @@
   "y": "36",
   "name": "チーム小澤",
   "discription": "所持金: 2000万円<br>急行カード<br>急行カード<br>急行カード<br>特急カード"},
-  {"station": "清水道",
+  {"station": "東福寺",
   "style": "kozawa",
-  "x": "6",
-  "y": "6",
+  "x": "-6",
+  "y": "-6",
   "name": "川邊",
   "discription": ""}
 ]
