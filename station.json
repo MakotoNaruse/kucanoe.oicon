@@ -253,7 +253,7 @@
 "lng": "135.77719937834672",
 "type": "station-property-des",
 "name": "祇園",
-"discription": "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>高級料亭<td>1億円<td>40%<td></tr><td>高級料亭<td>1億円<td>40%<td></tr><td>高級料亭<td>1億円<td>40%<td></tr><td>舞妓さんと遊ぶとこ<td>2億円<td>30%<td></tr><td>舞妓さんと遊ぶとこ<td>2億円<td>30%<td></tr><td>八坂神社<td>3億円<td>10%<td></tr></table>"},
+"discription": "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>高級料亭<td>1億円<td>40%<td></tr><td>高級料亭<td>1億円<td>40%<td></tr><td>高級料亭<td>1億円<td>40%<td></tr><td>舞妓さんと遊ぶとこ<td>2億円<td>30%<td>OG</tr><td>舞妓さんと遊ぶとこ<td>2億円<td>30%<td>OG</tr><td>八坂神社<td>3億円<td>10%<td></tr></table>"},
 {"lat": "35.00640962555537",
 "lng": "135.77777681308504",
 "type": "station-red",
