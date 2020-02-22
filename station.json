@@ -67,7 +67,7 @@
 "lng": "135.7807570670597",
 "type": "station-property",
 "name": "叡電元田中",
-"discription": "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>スーパーマーケット<td>3000万円<td>100%<td></tr><tr><td>鍋料理屋<td>1000万円<td>100%<td></tr><tr><td>中華料理屋<td>1000万円<td>100%<td></tr><tr><td>丼屋<td>1000万円<td>100%<td></tr><tr><td>焼肉屋<td>1000万円<td>100%<td></tr><tr><td>叡電元田中駅<td>5000万円<td>70%<td></tr></table>"},
+"discription": "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>スーパーマーケット<td>3000万円<td>100%<td>OB</tr><tr><td>鍋料理屋<td>1000万円<td>100%<td>OB</tr><tr><td>中華料理屋<td>1000万円<td>100%<td>OB</tr><tr><td>丼屋<td>1000万円<td>100%<td>OB</tr><tr><td>焼肉屋<td>1000万円<td>100%<td>OB</tr><tr><td>叡電元田中駅<td>5000万円<td>70%<td>OB</tr></table>"},
 {"lat": "35.037061156891106",
 "lng": "135.78159333587482",
 "type": "station-card",
