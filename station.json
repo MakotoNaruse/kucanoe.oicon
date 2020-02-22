@@ -433,7 +433,7 @@
 "lng": "135.77010775183257",
 "type": "station-property",
 "name": "東福寺",
-"discription": "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>東福寺<td>2億円<td>20%<td></tr><tr><td>JR東福寺駅<td>1億円<td>20%<td></tr><tr><td>京阪東福寺駅<td>1億円<td>20%<td></tr><tr><td>ラーメン屋<td>1000万円<td>100%<td></tr><tr><td>コンビニ<td>2000万円<td>100%<td></tr></table>"},
+"discription": "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>東福寺<td>2億円<td>20%<td></tr><tr><td>JR東福寺駅<td>1億円<td>20%<td></tr><tr><td>京阪東福寺駅<td>1億円<td>20%<td></tr><tr><td>ラーメン屋<td>1000万円<td>100%<td>4回</tr><tr><td>コンビニ<td>2000万円<td>100%<td>4回</tr></table>"},
 {"lat": "34.97954640087945",
 "lng": "135.76400705607313",
 "type": "station-red",
