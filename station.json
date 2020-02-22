@@ -15,7 +15,7 @@
 "lng": "135.79142819814876",
 "type": "station-property-des",
 "name": "銀閣寺道",
-"discription": "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>哲学の道図書館<td>3000万円<td>50%<td></tr><tr><td>白沙村荘記念館<td>5000万円<td>50%<td></tr><tr><td>和菓子店<td>7000万円<td>70%<td></tr><tr><td>蕎麦屋<td>3000万円<td>100%<td></tr><tr><td>和雑貨店<td>3000万円<td>50%<td></tr></table>"},
+"discription": "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>哲学の道図書館<td>3000万円<td>50%<td>OB</tr><tr><td>白沙村荘記念館<td>5000万円<td>50%<td>OB</tr><tr><td>和菓子店<td>7000万円<td>70%<td>OB</tr><tr><td>蕎麦屋<td>3000万円<td>100%<td>OB</tr><tr><td>和雑貨店<td>3000万円<td>50%<td>OB</tr></table>"},
 {"lat": "35.0251782829269",
 "lng": "135.79188184021123",
 "type": "station-blue",
