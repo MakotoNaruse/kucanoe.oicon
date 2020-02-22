@@ -450,7 +450,7 @@
 "lng": "135.75375821135432",
 "type": "station-property",
 "name": "東寺道",
-"discription": "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>東寺<td>2億円<td>20%<td></tr><tr><td>五重塔<td>1億円<td>50%<td></tr><tr><td>近鉄東寺駅<td>1億円<td>20%<td></tr><tr><td>コンビニ<td>3000万円<td>100%<td></tr><tr><td>コンビニ<td>3000万円<td>100%<td></tr></table>"},
+"discription": "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>東寺<td>2億円<td>20%<td></tr><tr><td>五重塔<td>1億円<td>50%<td>4回</tr><tr><td>近鉄東寺駅<td>1億円<td>20%<td></tr><tr><td>コンビニ<td>3000万円<td>100%<td></tr><tr><td>コンビニ<td>3000万円<td>100%<td></tr></table>"},
 {"lat": "34.984230125747395",
 "lng": "135.75886245510966",
 "type": "station-property",
