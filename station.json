@@ -45,7 +45,7 @@
 "lng": "135.7783869229897",
 "type": "station-property",
 "name": "熊野神社前",
-"discription": "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>京大病院<td>3億円<td>50%<td></tr><tr><td>八つ橋屋<td>3000万円<td>100%<td></tr><tr><td>パフェ店<td>3000万円<td>100%<td></tr><tr><td>ラーメン屋<td>3000万円<td>100%<td></tr><tr><td>神社<td>7000万円<td>50%<td></tr></table>"},
+"discription": "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>京大病院<td>3億円<td>50%<td>4回</tr><tr><td>八つ橋屋<td>3000万円<td>100%<td>4回</tr><tr><td>パフェ店<td>3000万円<td>100%<td>4回</tr><tr><td>ラーメン屋<td>3000万円<td>100%<td>4回</tr><tr><td>神社<td>7000万円<td>50%<td></tr>4回</table>"},
 {"lat": "35.020390492215675",
 "lng": "135.77847811298977",
 "type": "station-card",
