@@ -19,7 +19,7 @@
   "discription": "所持金: 3億0000万円"},
   {"station": "百万遍",
   "style": "team-green",
-  "x": "-6",
+  "x": "36",
   "y": "-6",
   "name": "チーム4",
   "discription": "所持金: 3億0000万円"},
@@ -27,6 +27,6 @@
   "style": "kozawa",
   "x": "36",
   "y": "-6",
-  "name": "小澤",
+  "name": "土井",
   "discription": ""}
 ]
